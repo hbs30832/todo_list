@@ -14,6 +14,7 @@ const TodoTemplateBlock = styled.div`
 
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 function TodoTemplate({ children }) {
