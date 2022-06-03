@@ -1,10 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-function Button({ text, size, color }) {
-  const onClick = () => {
-    console.log("클릭");
-  };
+function Button({ text, size, color, onClick }) {
   return (
     <ButtonBlock size={size} color={color} onClick={onClick}>
       {text}
@@ -33,6 +30,7 @@ const sizeStyles = css`
     font-size: ${sizes[size].fontSize};
   `}
 `;
+
 const ButtonBlock = styled.button`
   padding: 10px 20px;
   color: #fff;

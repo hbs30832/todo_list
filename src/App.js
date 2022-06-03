@@ -1,23 +1,27 @@
-import styled from "styled-components";
-import Button from "./components/Button";
+import { createGlobalStyle } from "styled-components";
+import { Reset } from "styled-reset";
 
-const main_color = "#228be6";
+import TodoHead from "./components/TodoHead";
+import TodoTemplate from "./components/TodoTemplate";
+import TodoList from "./components/TodoList";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #e9ecef;
+  }
+`;
+
 function App() {
   return (
-    <Block>
-      <Button text="버튼" size="big" color="red" />
-    </Block>
+    <>
+      <Reset />
+      <GlobalStyle />
+      <TodoTemplate>
+        <TodoHead />
+        <TodoList />
+      </TodoTemplate>
+    </>
   );
 }
-
-const Block = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${main_color};
-  width: 500px;
-  height: 500px;
-  margin: 50px auto 0;
-`;
 
 export default App;
